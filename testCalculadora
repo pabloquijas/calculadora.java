@@ -1,0 +1,87 @@
+/**
+ * Created by Usuario on 23/08/2016.
+ */
+public class testCalculadora {
+    static int opcion;
+    static double n1, n2;
+
+    public static void main(String[] arg){
+        //Para Leer Datos Del Teclado
+        Scanner lector = new Scanner (System.in);
+        Calculadora calc = new Calculadora();
+        do{
+            System.out.println("M E N U");
+            System.out.println("1.-SUMAR");
+            System.out.println("2.-RESTAR");
+            System.out.println("3.-MULTIPLICAR");
+            System.out.println("4.-DIVIDIR");
+            System.out.println("5.-PAR");
+            System.out.println("6.-FACTORIAL");
+            System.out.println("7.-PRIMO");
+            System.out.println("0.-SALIR");
+            System.out.println("\nOPCION: ");
+
+            opcion = lector.nextInt();
+
+            switch(opcion){
+                case 0:
+
+                    System.out.println("Programa finalizado\n");
+                    break;
+
+                case 1:
+
+                    System.out.println("Numero 1: ");
+                    n1 = lector.nextDouble();
+                    System.out.println("Numero 2: ");
+                    n2 = lector.nextDouble();
+
+                    System.out.println("La suma es " + calc.sumar(n1, n2) + "\n");
+                    break;
+
+                case 2:
+
+                    System.out.println("Numero 1: ");
+                    n1 = lector.nextDouble();
+                    calc.setNum1(n1);
+                    System.out.println("Numero 2: ");
+                    n2 = lector.nextDouble();
+                    calc.setNum1(n2);
+
+                    System.out.println("La resta es " + calc.restar() + "\n");
+                    break;
+
+                case 3:
+
+                    System.out.println("Numero 1: ");
+                    n1 = lector.nextDouble();
+                    calc.setNum1(n1);
+                    System.out.println("Numero 2: ");
+                    n2 = lector.nextDouble();
+                    calc.setNum2(n2);
+
+                    calc.multiplicar();
+
+                    System.out.println("La multiplicacion es " + calc.getResultado() + "\n");
+                    break;
+
+                case 4:
+
+
+                    System.out.println("Numero 1: ");
+                    n1 = lector.nextDouble();
+                    calc.setNum1(n1);
+                    System.out.println("Numero 2: ");
+                    n2 = lector.nextDouble(n2);
+
+                    System.out.println("La division es " + calc.division(n1, n2) + "\n");
+                    break;
+
+
+
+            }
+
+        }while (opcion != 0);
+
+    }
+}
