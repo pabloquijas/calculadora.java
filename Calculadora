@@ -1,0 +1,43 @@
+/**
+ * Created by Usuario on 23/08/2016.
+ */
+public class Calculadora {
+    //Atributos
+    public double num1;
+    public double num2;
+    public double resultado;
+
+    // Metodos
+    public double sumar (double n1, double n2) {
+        //resultado = n1 + n2;
+        //return resultado;
+        return n1 + n2;
+    }
+    public double restar(){
+        return num1 - num2;
+    }
+    public double getResultado() {
+        return resultado;
+    }public void setResultado(double resultado) {
+        this.resultado = resultado;
+    }
+    public double getNum2() {
+        return num2;
+    }
+    public void setNum2(double num2) {
+        this.num2 = num2;
+    }
+    public void multiplicar (){
+        resultado = num1 * num2;
+    }
+    public double getNum1() {
+            return num1;
+        }public void setNum1(double num1) {
+            this.num1 = num1;
+    }
+    public double division (double n1, double n2){
+        return n1 / n2;
+    }
+
+
+}
